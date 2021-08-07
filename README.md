@@ -2,7 +2,7 @@
 
 A RESTful API server for [Simple Twitter](https://github.com/ClementPan/simpleTwitterX) project built with Node.js, Express framework, and MySQL.
 
-🚀 Simple Twitter is now live [here](https://clementpan.github.io/simpleTwitterX), you can use the following account to login:
+🚀 Simple Twitter is now live [here](https://twitter-express-vue.herokuapp.com/), you can use the following account to login:
 
 ```
 Admin
