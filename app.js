@@ -6,6 +6,8 @@ if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config()
 }
 
+const DistDirectoryPath = __dirname + '/dist/'
+
 require('./models')
 
 const app = express()
@@ -19,7 +21,11 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
 // Set up static file
-app.use(express.static(publicDirectoryPath))
+app.use(express.static(DistDirectoryPath))
+
+app.get('/', (req, res) => {
+  res.sendFile(path + 'index.html')
+})
 
 server.listen(port, () => console.log(`Example app listening on port ${port}!`))
 
