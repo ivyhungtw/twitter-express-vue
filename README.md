@@ -19,12 +19,12 @@ Password: 12345678
 All URLs referenced in the API documentation have the following host and base path:
 
 ```
-https://simple-twitter-api-2021.herokuapp.com/api
+https://twitter-express-vue.herokuapp.com/api
 ```
 
 ## API Guideline
 
-Please refer to [API Docs](https://simple-twitter-api-2021.herokuapp.com/api-docs/) for more details. You can also test these APIs with the Swagger UI with the account below.
+Please refer to [API Docs](https://twitter-express-vue.herokuapp.com/api-docs/) for more details. You can also test these APIs with the Swagger UI with the account below.
 
 ```
 Admin

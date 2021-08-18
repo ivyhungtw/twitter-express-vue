@@ -16,7 +16,7 @@ externalDocs:
 servers:
   - url: 'http://localhost:3000/api'
     description: Development
-  - url: 'https://simple-twitter-api-2021.herokuapp.com/api'
+  - url: 'https://twitter-express-vue.herokuapp.com/api'
     description: Production
 tags:
   - name: admin

@@ -24,7 +24,7 @@ const socket = server => {
   global.io = socketio(server, {
     cors: {
       origin: [
-        'http://localhost:8080',
+        'http://localhost:3000',
         'https://ivyhungtw.github.io',
         'https://clementpan.github.io'
       ],
