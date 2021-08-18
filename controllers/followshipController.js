@@ -1,6 +1,7 @@
 const db = require('../models')
 const Followship = db.Followship
 const User = db.User
+const { Op } = require('sequelize')
 
 const followshipController = {
   followUser: async (req, res, next) => {
@@ -10,7 +11,7 @@ const followshipController = {
       const followingUser = await User.findOne({
         where: {
           id: followingId,
-          $not: { role: 'admin' }
+          role: { [Op.not]: 'admin' }
         }
       })
 
@@ -63,8 +64,7 @@ const followshipController = {
       const followerId = req.user.id
       const unfollowedUser = await User.findOne({
         where: {
-          id: followingId,
-          $not: { role: 'admin' }
+          id: followingId
         }
       })
 
