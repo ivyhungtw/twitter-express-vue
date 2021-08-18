@@ -6,6 +6,7 @@ const Message = db.Message
 const Notification = db.Notification
 const Tweet = db.Tweet
 const Reply = db.Reply
+const { Op } = require('sequelize')
 
 const { users } = require('../utils/users')
 const { Sequelize, sequelize } = require('../models')
@@ -181,7 +182,7 @@ const roomController = {
         attributes: ['ChatRoomId'],
         where: {
           UserId: req.user.id,
-          ChatRoomId: { $not: PUBLIC_ROOM_ID }
+          ChatRoomId: { [Op.not]: PUBLIC_ROOM_ID }
         }
       })
       joinedRooms = joinedRooms.map(room => room.ChatRoomId)
@@ -267,7 +268,7 @@ const roomController = {
         attributes: ['ChatRoomId'],
         where: {
           UserId: req.user.id,
-          ChatRoomId: { $not: PUBLIC_ROOM_ID }
+          ChatRoomId: { [Op.not]: PUBLIC_ROOM_ID }
         }
       })
       joinedRooms = joinedRooms.map(room => room.ChatRoomId)
